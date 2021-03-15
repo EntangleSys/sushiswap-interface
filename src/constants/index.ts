@@ -1,4 +1,4 @@
-import { ChainId, JSBI, Percent, Token, WETH } from '@sushiswap/sdk'
+import { ChainId, JSBI, Percent, Token, WETH, GANACHE_CONFIG } from '@sushiswap/sdk'
 import { AbstractConnector } from '@web3-react/abstract-connector'
 
 import { fortmatic, injected, portis, lattice, walletconnect, walletlink } from '../connectors'
@@ -49,7 +49,8 @@ export const SUSHI: ChainTokenMap = {
   ),
   [ChainId.GÖRLI]: new Token(ChainId.GÖRLI, '0x0769fd68dFb93167989C6f7254cd0D766Fb2841F', 18, 'SUSHI', 'SushiToken'),
   [ChainId.KOVAN]: new Token(ChainId.KOVAN, '0x0769fd68dFb93167989C6f7254cd0D766Fb2841F', 18, 'SUSHI', 'SushiToken'),
-  [ChainId.FANTOM]: new Token(ChainId.KOVAN, '0xae75A438b2E0cB8Bb01Ec1E1e376De11D44477CC', 18, 'SUSHI', 'SushiToken')
+  [ChainId.FANTOM]: new Token(ChainId.KOVAN, '0xae75A438b2E0cB8Bb01Ec1E1e376De11D44477CC', 18, 'SUSHI', 'SushiToken'),
+  [ChainId.GANACHE]: new Token(ChainId.GANACHE, GANACHE_CONFIG.SUSHI_ADDRESS, 18, 'SUSHI', 'SushiToken')
 }
 
 export const COMMON_CONTRACT_NAMES: { [address: string]: string } = {
@@ -78,7 +79,8 @@ const WRAPPED_NATIVE_ONLY: ChainTokenList = {
   [ChainId.BSC]: [WETH[ChainId.BSC]],
   [ChainId.BSC_TESTNET]: [WETH[ChainId.BSC_TESTNET]],
   [ChainId.ARBITRUM]: [WETH[ChainId.ARBITRUM]],
-  [ChainId.MOONBASE]: [WETH[ChainId.MOONBASE]]
+  [ChainId.MOONBASE]: [WETH[ChainId.MOONBASE]],
+  [ChainId.GANACHE]: [WETH[ChainId.GANACHE]]
 }
 
 // Default Ethereum chain tokens

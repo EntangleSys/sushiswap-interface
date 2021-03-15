@@ -7,7 +7,7 @@ import { LatticeConnector } from '@web3-react/lattice-connector'
 
 import { FortmaticConnector } from './Fortmatic'
 import { NetworkConnector } from './NetworkConnector'
-import { ChainId } from '@sushiswap/sdk'
+import { ChainId, GANACHE_CONFIG } from '@sushiswap/sdk'
 
 const RPC = {
   [ChainId.MAINNET]: 'https://eth-mainnet.alchemyapi.io/v2/q1gSNoSMEzJms47Qn93f9-9Xg5clkmEC',
@@ -22,7 +22,8 @@ const RPC = {
   [ChainId.XDAI]: 'https://rpc.xdaichain.com',
   [ChainId.BSC]: 'https://bsc-dataseed.binance.org/',
   [ChainId.BSC_TESTNET]: 'https://data-seed-prebsc-2-s3.binance.org:8545',
-  [ChainId.MOONBASE]: 'https://rpc.testnet.moonbeam.network'
+  [ChainId.MOONBASE]: 'https://rpc.testnet.moonbeam.network',
+  [ChainId.GANACHE]: GANACHE_CONFIG.RPC
 }
 
 export const network = new NetworkConnector({
@@ -49,7 +50,8 @@ export const injected = new InjectedConnector({
     100, // xdai
     56, // binance smart chain
     97, // binance smart chain testnet
-    1287 // moonbase
+    1287, // moonbase
+    1337 // ganache
   ]
 })
 

@@ -1,0 +1,3 @@
+[submodule "dependencies/@sushiswap/sdk"]
+	path = dependencies/@sushiswap/sdk
+	url = git@github.com:EntangleSys/sushiswap-sdk.git

@@ -198,6 +198,10 @@ const chains: ChainObject = {
   [ChainId.MOONBASE]: {
     chainName: '',
     builder: builders.moonbase
+  },
+  [ChainId.GANACHE]: {
+    chainName: '',
+    builder: builders.etherscan
   }
 }
 
