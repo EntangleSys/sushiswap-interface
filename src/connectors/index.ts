@@ -26,8 +26,10 @@ const RPC = {
   [ChainId.GANACHE]: GANACHE_CONFIG.RPC
 }
 
+export const NETWORK_CHAIN_ID: number = parseInt(process.env.REACT_APP_CHAIN_ID ?? '1')
+
 export const network = new NetworkConnector({
-  defaultChainId: 1,
+  defaultChainId: NETWORK_CHAIN_ID,
   urls: RPC
 })
 
